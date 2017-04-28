@@ -146,9 +146,7 @@
 }
 
 .notification {
-  &__notice {
-    color: $sideColor;
-    background-color: $buttonColor;
-    text-align: center;
-  }
+  color: $sideColor;
+  background-color: $buttonColor;
+  text-align: center;
 }
