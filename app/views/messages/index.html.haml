@@ -5,8 +5,7 @@
     .chat-main__header-group
       %p.chat-main__header-group-name<
         group name
-      %a.chat-main__header-group-edit-btn<
-        edit
+      = link_to "edit", "/groups/#{@group.id}/edit", class: "chat-main__header-group-edit-btn"
     .chat-main__header-members<
       MEMBER:
       %i<
