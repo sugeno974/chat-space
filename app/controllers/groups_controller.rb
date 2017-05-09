@@ -11,6 +11,7 @@ class GroupsController < ApplicationController
       flash[:notice] = 'チャットグループが作成されました。'
       redirect_to root_path
     else
+      flash[:alert] = 'チャットグループが作成されませんでした。'
       render :new
     end
   end
