@@ -7,6 +7,8 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(create_params)
     if @group.save
+      flash[:notice] = 'チャットグループが作成されました。'
+      redirect_to root_path
     else
       render :new
     end
