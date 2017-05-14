@@ -13,7 +13,7 @@
           = user.name
   .chat-main__body
     .chat-main__body-messages-list
-      = render partial: "body-message", locals: { messages: @group.messages }
+      = render partial: "body-message", locals: { messages: @messages }
   .chat-main__footer
     = form_for [@group, @message], html: {class: "chat-main__footer-form"} do |f|
       .chat-main__footer-body
