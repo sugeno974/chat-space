@@ -14,7 +14,7 @@
     .chat-main__body-messages-list
       = render partial: "body-message"
   .chat-main__footer
-    %form.chat-main__footer-form
+    = form_for [@group, @message], html: {class: "chat-main__footer-form"} do |f|
       .chat-main__footer-body
-        %input.chat-main__footer-body-message{placeholder: "type a message", type: "text"}
-        %input.chat-main__footer-body-submit{type: "submit", value: "Send"}
+        = f.text_field :body, class: "chat-main__footer-body-message", placeholder: "type a message"
+        = f.submit "Send", class: "chat-main__footer-body-submit"
