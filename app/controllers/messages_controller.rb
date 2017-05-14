@@ -5,6 +5,16 @@ class MessagesController < ApplicationController
     @message = Message.new
   end
 
+  def create
+    @message = Message.new(create_params)
+    if @message.save
+      flash[:notice] = 'メッセージ送信成功。'
+    else
+      flash[:alert] = 'メッセージが空です。'
+    end
+    redirect_to group_messages_path
+  end
+
   private
 
   def create_params
